@@ -1,23 +1,18 @@
-import java.util.ArrayList;
-
 class Solution {
 
     public static String reverseWords(String s) {
 
-        String regex = "[\\s]";
-        String[] myArray = s.split(regex);
+        byte[] byteArray = s.getBytes();
 
-        ArrayList<String> revArray = new ArrayList<>();
-        for (int i = myArray.length - 1; i >= 0; i--) {
-            if (!"".equals(myArray[i])) {
-                revArray.add(myArray[i]);
-            }
+        for (int i = byteArray.length - 1; i >= 0; i--){
+            System.out.println(byteArray[i]);
         }
-        return String.join(" ", revArray);
+
+        return s;
     }
 
     public static void main(String[] args) {
 
-        System.out.print(reverseWords(" new era "));
+        System.out.print(reverseWords(" new  era "));
     }
 }
