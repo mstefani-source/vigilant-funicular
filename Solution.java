@@ -4,7 +4,7 @@ class Solution {
 
     public static String reverseWords(String s) {
 
-        String regex = "[\\s]";
+        String regex = "[\\s+]";
         String[] myArray = s.split(regex);
 
         ArrayList<String> revArray = new ArrayList<>();
@@ -18,6 +18,10 @@ class Solution {
 
     public static void main(String[] args) {
 
-        System.out.print(reverseWords(" new era "));
+        System.out.println(reverseWords(" new era "));
+        System.out.println(reverseWords(" Hello   World "));
+        System.out.println(reverseWords("Plan B"));
+        System.out.println(reverseWords("the sky is blue"));
+
     }
 }
