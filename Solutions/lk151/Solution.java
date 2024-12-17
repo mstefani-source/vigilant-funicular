@@ -1,3 +1,4 @@
+package Solutions.lk151;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -31,7 +32,4 @@ class Solution {
         return String.join(" ", revArray);
     }
 
-    public static void main(String[] args) {
-        System.out.print(reverseWords("  end of the day  "));
-    }
 }
