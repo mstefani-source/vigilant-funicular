@@ -5,9 +5,10 @@ import java.util.function.Consumer;
 
 class Solution {
 
-    public static String reverseWords(String s) {
+  public static String reverseWords(String s) {
         
         String regex = "[\\s+]";
+
         String[] myArray = s.split(regex);
         ArrayList<String> revArray = new ArrayList<>();
         List<String> words = Arrays.asList(myArray);
@@ -31,7 +32,6 @@ class Solution {
     }
 
     public static void main(String[] args) {
-
         System.out.print(reverseWords("  end of the day  "));
     }
 }
