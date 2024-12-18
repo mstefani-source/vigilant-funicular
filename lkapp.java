@@ -1,10 +1,11 @@
-import Solutions.lk238.*;
 import Solutions.lk151.*;
 
 public class lkapp {
 
     public static void main(String[] args) {
-        
-        System.out.print(reverseWords("  end of the day  "));
+
+        Consumers lk151 = new Consumers();       
+        System.out.print(lk151.reverseWords("  end of the day  "));
+    
     }
 }
