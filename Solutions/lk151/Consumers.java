@@ -1,11 +1,12 @@
+package Solutions.lk151;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
 
-class Solution {
+public class Consumers {
 
-  public static String reverseWords(String s) {
+  public String reverseWords(String s) {
         
         String regex = "[\\s+]";
 
@@ -31,7 +32,4 @@ class Solution {
         return String.join(" ", revArray);
     }
 
-    public static void main(String[] args) {
-        System.out.print(reverseWords("  end of the day  "));
-    }
 }
