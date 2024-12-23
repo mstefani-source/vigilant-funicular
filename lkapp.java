@@ -4,8 +4,10 @@ public class lkapp {
 
     public static void main(String[] args) {
 
-        Consumers lk151 = new Consumers();       
+        Consumers lk151 = new Consumers();
+        ByteArray ba = new ByteArray();       
         System.out.print(lk151.reverseWords("  end of the day  "));
+        System.out.print(ba.reverseWords("  hello world of java  "));
     
     }
 }
