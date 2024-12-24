@@ -14,20 +14,20 @@ public class Consumers {
         ArrayList<String> revArray = new ArrayList<>();
         List<String> words = Arrays.asList(myArray);
 
-        Consumer <List<String>> trimConsumer = list -> {
+        Consumer<List<String>> trimConsumer = list -> {
             for (int x = 0; x < list.size() - 1; x++) {
-                list.set(x, list.get(x).trim()); 
+                list.set(x, list.get(x).trim());
             }
         };
 
-        Consumer <List<String>> fillupConsumer = list -> {
+        Consumer<List<String>> fillupConsumer = list -> {
             for (int x = list.size() - 1; x >= 0; x--) {
                 if (!list.get(x).isBlank()) {
                     revArray.add(list.get(x));
                 }
             }
         };
-        
+
         trimConsumer.andThen(fillupConsumer).accept(words);
         return String.join(" ", revArray);
     }
