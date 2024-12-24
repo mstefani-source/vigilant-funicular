@@ -8,6 +8,7 @@ class ArrayOfString {
         String[] myArray = s.split(regex);
         ArrayList<String> revArray = new ArrayList<>();
 
+
         for (int i = myArray.length - 1; i >= 0; i--) {
             if (!"".equals(myArray[i])) {
                 revArray.add(myArray[i]);
