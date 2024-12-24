@@ -15,6 +15,6 @@
     Output: [0,0,9,0,0]
 */
 
-public class Solution_v1 {
+public class lk238_v1 {
     
 }
