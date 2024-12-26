@@ -1,8 +1,9 @@
+package lkapp.Solutions.lk151;
 
 import java.io.ByteArrayInputStream;
 import java.util.ArrayList;
 
-class ByteArray {
+public class ByteArray {
 
     public String reverseWords(String s) {
 
