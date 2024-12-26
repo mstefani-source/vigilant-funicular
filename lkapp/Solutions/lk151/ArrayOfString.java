@@ -1,6 +1,8 @@
+package lkapp.Solutions.lk151;
+
 import java.util.ArrayList;
 
-class ArrayOfString {
+public class ArrayOfString {
 
     public String reverseWords(String s) {
 
