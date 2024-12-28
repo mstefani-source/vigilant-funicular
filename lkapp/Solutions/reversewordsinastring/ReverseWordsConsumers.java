@@ -1,11 +1,11 @@
-package lkapp.Solutions.lk151;
+package lkapp.Solutions.reversewordsinastring;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class Consumers {
+public class ReverseWordsConsumers {
 
   public String reverseWords(String s) {
         
