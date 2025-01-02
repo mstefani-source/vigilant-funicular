@@ -37,5 +37,12 @@ public class lkapp {
             res = res.next;
         }
 
+
+        Solution2 sol2 = new Solution2();
+        ListNode l1 = new ListNode(3);
+        l1.next = new ListNode(2);
+        ListNode l2 = new ListNode(6);
+        l2.next = new ListNode();
+        sol2.addTwoNumbers(l1, l2);
     }
 }

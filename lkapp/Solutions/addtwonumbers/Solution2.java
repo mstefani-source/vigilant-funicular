@@ -32,6 +32,7 @@ public class Solution2 {
             reminder = sum > 9 ? 1 : 0;
             result.next = new ListNode();
             result = result.next;
+
         } while (l1 != null || l2 != null);
         return result;
     }
