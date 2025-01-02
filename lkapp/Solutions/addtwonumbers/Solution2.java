@@ -4,6 +4,7 @@ public class Solution2 {
 
     int value1;
     int value2;
+    int reminder;
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode result = new ListNode();
@@ -25,9 +26,13 @@ public class Solution2 {
             value2 = l2 == null ? 0 : l2.val;
             if (l1 != null) l1 = l1.next;
             if (l2 != null) l2 = l2.next;
+            int sum = value1 + value2 + reminder;
+            result.val = sum % 10;
+            System.out.println(result.val);
+            reminder = sum > 9 ? 1 : 0;
+            result.next = new ListNode();
+            result = result.next;
 
-
-            System.out.println("l1.next: " + value1 + " l2.next: " + value2);
         } while (l1 != null || l2 != null);
         return result;
     }
