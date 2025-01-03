@@ -21,7 +21,6 @@ public class Solution2 {
             //     value2 = l2.val;
             //     l2 = l2.next;
             // }
-            
             value1 = l1 == null ? 0 : l1.val;
             value2 = l2 == null ? 0 : l2.val;
             if (l1 != null) l1 = l1.next;
@@ -37,7 +36,7 @@ public class Solution2 {
             
         } while (l1 != null || l2 != null);
         result.val = placenum > 0 ? placenum: null;
-        
+       
         return result;
     }
 }
