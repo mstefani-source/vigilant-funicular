@@ -33,7 +33,7 @@ public class lkapp {
         res = sol2.addTwoNumbers(l1, l2);
 
         while (res != null){
-            System.out.println(res.val);
+            System.out.println("res: " + res.val);
             res = res.next;
         }
 
