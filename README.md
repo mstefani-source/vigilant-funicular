@@ -1,3 +1,2 @@
-# exercises from lk number 151 version 1
+# exercises from lk 
 
-solved by use classic "for" loop with backward counting
