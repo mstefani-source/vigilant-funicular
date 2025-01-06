@@ -9,8 +9,7 @@ public class Solution2 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
         ListNode result = new ListNode();
-        ListNode finalResult = result;
-
+        ListNode currentDigit = result;
         do {
             if (l1 == null) {
                 value1 = 0;
@@ -27,19 +26,19 @@ public class Solution2 {
 
             int sum = value1 + value2 + placenum;
             placenum = sum > 9 ? 1 : 0;
-            result.val = sum % 10;
+            currentDigit.val = sum % 10;
 
             if (l1 != null || l2 != null) {
-                result.next = new ListNode();
-                result = result.next;
+                currentDigit.next = new ListNode();
+                currentDigit = currentDigit.next;
             }
 
         } while (l1 != null || l2 != null);
 
         if (placenum > 0) {
-            result.next = new ListNode(placenum);
-        }
-
-        return finalResult;
+            currentDigit.next = new ListNode(placenum);
+        } 
+       
+        return result; 
     }
 }
