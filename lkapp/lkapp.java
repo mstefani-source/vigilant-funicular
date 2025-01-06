@@ -24,12 +24,23 @@ public class lkapp {
         //     System.out.println(indexes[i]);
         // }
 
-        ListNode res = new ListNode();
+        ListNode res;
         Solution2 sol2 = new Solution2();
-        ListNode l1 = new ListNode(3);
-        l1.next = new ListNode(2);
-        ListNode l2 = new ListNode(0);
-        l2.next = new ListNode(8);
+        
+        ListNode l1 = new ListNode(2);
+        ListNode l1d2 = new ListNode(4);
+        ListNode l1d1 = new ListNode(3);
+
+        l1.next = l1d2;
+        l1d2.next = l1d1;
+
+        ListNode l2 = new ListNode(5);
+        ListNode l2d2 = new ListNode(6);
+        ListNode l2d1 = new ListNode(4);
+
+        l2.next = l2d2;
+        l2d2.next = l2d1;
+
         res = sol2.addTwoNumbers(l1, l2);
 
         while (res != null){
