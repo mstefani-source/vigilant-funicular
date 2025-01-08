@@ -35,6 +35,7 @@ public class Solution2 {
             }
             currentDigit = currentDigit.next;
 
+
         } while (l1 != null || l2 != null);
 
         if (placenum > 0) {
