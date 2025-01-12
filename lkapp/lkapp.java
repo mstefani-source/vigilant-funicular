@@ -2,6 +2,7 @@ package lkapp;
 
 import lkapp.Solutions.addtwonumbers.ListNode;
 import lkapp.Solutions.addtwonumbers.Solution2;
+import lkapp.Solutions.lengthoflongestsubstring.*;
 import lkapp.Solutions.reversewordsinastring.*;
 import lkapp.Solutions.twosum.TwoSumHM;
 
@@ -24,6 +25,8 @@ public class lkapp {
         //     System.out.println(indexes[i]);
         // }
 
+        DayOfWeek.findByLabel("Su");
+
         ListNode res;
         Solution2 sol2 = new Solution2();
         
@@ -43,10 +46,18 @@ public class lkapp {
 
         res = sol2.addTwoNumbers(l1, l2);
 
-        while (res != null){
-            System.out.println("res: " + res.val);
-            res = res.next;
-        }
+        // while (res != null){
+        //     System.out.println("res: " + res.val);
+        //     res = res.next;
+        // }
+
+        LongestSubString str = new LongestSubString();
+
+        System.out.println("longest String: " + str.lengthOfLongestSubstring("pwwkew"));
+        System.out.println("longest String: " + str.lengthOfLongestSubstring("bbbbbb"));
+        System.out.println("longest String: " + str.lengthOfLongestSubstring("aab"));
+        System.out.println("longest String: " + str.lengthOfLongestSubstring("dvdf"));
+        System.out.println("longest String: " + str.lengthOfLongestSubstring("advsdw"));
 
     }
 }
