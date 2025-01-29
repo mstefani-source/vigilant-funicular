@@ -1,4 +1,4 @@
-package lkapp.Solutions.median;
+package lkapp.Solutions.palindrome;
 
 public class Palindrome {
 
