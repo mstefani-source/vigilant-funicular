@@ -1,5 +1,6 @@
 package lkapp;
 
+import lkapp.Solutions.palindrome.IntegerPalindrome;
 import lkapp.Solutions.palindrome.Palindrome;
 
 public class lkapp {
@@ -14,7 +15,10 @@ public class lkapp {
         // int[] nums = {3,3};
 
         Palindrome pl = new Palindrome();
-        System.out.println(pl.isPalindrome("abba"));
+        System.out.println(pl.isPalindrome("121"));
+
+        IntegerPalindrome iPl = new IntegerPalindrome();
+        System.out.println("->" + iPl.isPalindrome(121));
         
 
         // System.out.println(lk151.reverseWords("  end   of the day  "));
