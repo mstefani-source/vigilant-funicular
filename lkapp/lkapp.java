@@ -2,6 +2,7 @@ package lkapp;
 
 import lkapp.Solutions.palindrome.IntegerPalindrome;
 import lkapp.Solutions.palindrome.Palindrome;
+import lkapp.Solutions.palindrome.Palindrome2;
 
 public class lkapp {
 
@@ -14,11 +15,40 @@ public class lkapp {
         // TwoSumHM tshm = new TwoSumHM(); 
         // int[] nums = {3,3};
 
-        Palindrome pl = new Palindrome();
-        System.out.println(pl.isPalindrome("121"));
+        // Palindrome pl = new Palindrome();
+        // System.out.println(pl.isPalindrome("121"));
 
-        IntegerPalindrome iPl = new IntegerPalindrome();
-        System.out.println("->" + iPl.isPalindrome(121));
+        // IntegerPalindrome iPl = new IntegerPalindrome();
+        // System.out.println("->" + iPl.isPalindrome(121));
+
+        // int number = 12345;
+        
+        // // Находим количество цифр в числе
+        // int digitsCount = (int)Math.floor(Math.log10(number)) + 1;
+        
+        // // Отбрасываем первую цифру
+        // int newNumber = number % (int)Math.pow(10, digitsCount - 1);
+        
+        // System.out.println("Исходное число: " + number);
+        // System.out.println("Число без первой цифры: " + newNumber);
+
+
+
+        // int number = 1234;
+        
+        // // Получаем целую часть от деления на 10
+        // int quotient = number / 10;
+        
+        // System.out.println("Целая часть от деления " + number + " на 10: " + quotient);
+
+
+    
+        
+        // int ott = quotient / 10;
+        // System.out.println(ott);
+
+        Palindrome2 palindrome2 = new Palindrome2();
+        System.out.println(palindrome2.isPalindrome(1001));
         
 
         // System.out.println(lk151.reverseWords("  end   of the day  "));
