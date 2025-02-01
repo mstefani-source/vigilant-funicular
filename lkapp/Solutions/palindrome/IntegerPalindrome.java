@@ -5,6 +5,7 @@ public class IntegerPalindrome {
         if (x < 0) return false;
         String stringDigit = Integer.toString(x);
         
+        
         return isPalindrome(stringDigit);
     }
 
