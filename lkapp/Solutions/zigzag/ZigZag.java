@@ -31,6 +31,10 @@ package lkapp.Solutions.zigzag;
 *  RING                 {'R', 'I', 'N', 'G', ' ', ' '}
 *
 * =====================================================
+*  PAYPAL   numrows 2     {'P', 'A'} 
+*                         {'Y', 'P'}     
+*                         {'A', 'L'}
+* =====================================================
 *
 *                           0    1    2    3 
 *  PAYP      numRows 4    {'P', 'A', 'Y', 'P'}      (0)
@@ -39,13 +43,8 @@ package lkapp.Solutions.zigzag;
 *  ISHI                   {'I', 'S', 'H', 'I'}      (0)
 *    R                    {' ', ' ', 'R', ' '}      (2)    
 *   I                     {' ', 'I', ' ', ' '}      (1)    
-*  NG                     {'N', 'G', ' ', ' '}      (0)     1, 2, 3, 4, 5, 6
-                                                            
+*  NG                     {'N', 'G', ' ', ' '}      (0)     1, 2, 3, 4, 5, 6                                                           
 * ===============================================================================================
-*  PAYPAL   numrows 2     {'P', 'A'} 
-                          {'Y', 'P'}     
-*                         {'A', 'L'}
-* =====================================================
 */
 public class ZigZag {
     public String convert(String s, int numRows) {
@@ -59,7 +58,6 @@ public class ZigZag {
             while (index < s.length()) {
                 if (indexOfResult == i) {
                     resultString.append(s.charAt(index));
-                    factor = 1;
                 }
                 if (indexOfResult == numRows - 1) {
                     factor = -1;
