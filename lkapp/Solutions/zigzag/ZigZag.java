@@ -1,5 +1,9 @@
 package lkapp.Solutions.zigzag;
 
+import java.util.HashMap;
+import java.util.Map;
+import javax.sound.sampled.SourceDataLine;
+
 /*
 *
 *
@@ -48,25 +52,33 @@ package lkapp.Solutions.zigzag;
 */
 public class ZigZag {
     public String convert(String s, int numRows) {
-        StringBuilder resultString = new StringBuilder();
+        Map<Integer, StringBuilder> resultMap = new HashMap<>();
+        StringBuilder resultString = new StringBuilder(s.length());
+
         if (s.length() < numRows || numRows == 1)
             return s;
-        for (int i = 0; i < numRows; i++) { 
-            int index = i; 
-            int factor = 1; 
-            int indexOfResult = i;
-            while (index < s.length()) {
-                if (indexOfResult == i) {
-                    resultString.append(s.charAt(index));
-                }
-                if (indexOfResult == numRows - 1) {
-                    factor = -1;
-                }
-                if (indexOfResult == 0)
-                    factor = 1;
-                indexOfResult += factor;
-                index++;
+        int index = 0;
+        int factor = 1;
+        int indexOfResult = 0;
+
+        while (index < s.length()) {
+            if (resultMap.get(indexOfResult) == null) {
+                resultMap.put(indexOfResult, new StringBuilder().append(s.charAt(index)));
+            } else {
+                resultMap.get(indexOfResult).append(s.charAt(index));
             }
+
+            if (indexOfResult == numRows - 1) {
+                factor = -1;
+            }
+            if (indexOfResult == 0)
+                factor = 1;
+            indexOfResult += factor;
+            index++;
+        }
+
+        for (StringBuilder value : resultMap.values()) {
+            resultString.append(value);
         }
         return resultString.toString();
     }

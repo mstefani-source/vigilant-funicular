@@ -4,8 +4,6 @@ public class Palindrome2 {
     public boolean isPalindrome(int x) {
         Integer sd = x;
 
-        Integer.stringSize(sd);
-
         if (x / 10 == 0)
             return true;
         if (firstDigit(x) == x % 10) {
