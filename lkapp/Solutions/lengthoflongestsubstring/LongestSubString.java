@@ -19,7 +19,7 @@ public class LongestSubString {
             longestSubString.add(sCharArray[second]);
             sizeAfterAddChar = longestSubString.size();
 
-            if (sizeBeforeAddChar == longestSubString.size()) {
+            if (sizeBeforeAddChar == sizeAfterAddChar) {
                 second = first;
                 length = length < sizeAfterAddChar ? sizeAfterAddChar : length;
                 longestSubString.clear();
