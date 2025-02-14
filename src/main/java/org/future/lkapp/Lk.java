@@ -22,15 +22,6 @@ public class Lk {
         TwoSumHM tshm = new TwoSumHM();
         int[] nums = { 3, 3 };
 
-        // System.out.println(lk151.reverseWords(" end of the day "));
-        // System.out.println(ba.reverseWords(" hello world of java "));
-        // System.out.println(aos.reverseWords(" hello world of haos "));
-        // int[] indexes = tshm.twoSum(nums, 6);
-
-        // for (int i = 0; i < indexes.length; i++) {
-        // System.out.println(indexes[i]);
-        // }
-
         DayOfWeek.findByLabel("Su");
 
         ListNode res;
@@ -51,11 +42,6 @@ public class Lk {
         l2d2.next = l2d1;
 
         res = sol2.addTwoNumbers(l1, l2);
-
-        // while (res != null){
-        // System.out.println("res: " + res.val);
-        // res = res.next;
-        // }
 
         LongestSubString str = new LongestSubString();
 
