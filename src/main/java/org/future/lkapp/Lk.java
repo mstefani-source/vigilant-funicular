@@ -1,7 +1,10 @@
 package org.future.lkapp;
 
 
+import java.util.Date;
 import java.util.Map;
+
+import javax.xml.crypto.Data;
 
 import org.future.lkapp.Solutions.reversewordsinastring.*;
 import org.future.lkapp.Solutions.twosum.*;
@@ -17,9 +20,14 @@ import org.future.lkapp.Solutions.zigzag.*;
 public class Lk {
 
     public static void main(String[] args) {
-        LongestPalindromicSubstring lps = new LongestPalindromicSubstring();
 
-        System.out.println("hey = " + lps.longestPalindrome("babad"));
+        LongestPalindromicSubstring lps = new LongestPalindromicSubstring();
+        long startTime = System.currentTimeMillis();
+        System.out.println("hey = " + lps.longestPalindrome("vnjwvalrbypfcbqnmopltjnoifmzwgvpzqzsdtvawndpjtpmpjbjionjifqtvvocpeaftvhpdgjjfafunfndztdjkcxyihtsyppendfzzjeyxlbwpdygiqmdqcdbmgyjigrmfkswcwryaydjilqqxvcnyvviesuncslvzikawwqykqwdfibggezufqihcjkebapmgkvwixywgdextafxycnipjglsndkyjoqfyfljfkkvoieksmavdlmlhhnstesibffiopqvlyuidvrawndbzonwzbsjmpeqoglmdbinkovqpzfkxihzitdopnomseqhmrrkcsvrzziphwpuhjngeotwcrebcmbtirkgeavojtmpakcewmexhxacngknokxsvtqobdgckutpexswgwqzbosjpxauyflnylfcxsucsehqvakbpvfmkelmkspsqxnutwfwacpqqvovdqafeylobneojdsgqowcbxfsvuqusdbylcgcvgrofgvzubakjmlbffjhrafvnqttwuyhokzpmhlludpbowuxzrebxsdusalljfjgjkucwzpmndqncykvfnbrxcrcaxwisjpstejjqbpwegpxyrtyafxklgralnkwxkmjpuqfixzkonznmguyizlancpxdzcfkgiotyelegprbaytdhbutbuihkxnbtuqrtezaskfqsmrznfohhlqp"));
+        long finishTime = System.currentTimeMillis();
+
+        System.out.format("time: %d%n", finishTime - startTime);
+
 
         // ReverseWordsConsumers lk151 = new ReverseWordsConsumers();
         // ReverseWordsByteArrayImputStream ba = new ReverseWordsByteArrayImputStream();

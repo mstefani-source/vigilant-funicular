@@ -7,50 +7,38 @@ public class LongestPalindromicSubstring {
     public String longestPalindrome(String s) {
         String result = "";
         if (s.length() < 1 || s.length() > 1000) {
-            return result;
+            return "";
         }
-        Set<String> setOfPalindromes = new HashSet<>();
         if (isPalindrome(s))
-            result = s;
+            return s;
         int leftIndex = 0;
-        while (leftIndex < s.length() - 1) {
-            for (int i = leftIndex + 1; i < s.length(); i++) {
-                if (isPalindrome(s.substring(leftIndex, i))){
-                    if (!setOfPalindromes.contains(s.substring(leftIndex, i))){
-                        setOfPalindromes.add(s.substring(leftIndex,i));
-                    }
+        int maxLength = 0;
+        String currentSubString;
+        while (leftIndex < s.length()) {
+            for (int i = leftIndex + 1; i <= s.length(); i++) {
+                currentSubString = s.substring(leftIndex, i);
+                if (currentSubString.length() > maxLength && isPalindrome(currentSubString)) {
+                    maxLength = currentSubString.length();
+                    result = currentSubString;
                 }
             }
             leftIndex++;
         }
-        return findLongestString(setOfPalindromes);
+        return result;
     }
 
-    private boolean isPalindrome(String s) {
-        if (s.length() == 1) {
-            return true;
-        }
-        if (s.charAt(0) == s.charAt(s.length() - 1)) {
-            if (s.length() == 2)
-                return true;
-            return isPalindrome(s.substring(1, s.length() - 1));
-        }
-        return false;
-    }
+    private boolean isPalindrome(String str) {
+        int left = 0;
+        int right = str.length() - 1;
 
-    private static String findLongestString(Set<String> set) {
-        if (set.isEmpty()) {
-            return null; // Если множество пустое, возвращаем null
-        }
-        
-        String longest = "";
-        
-        for (String s : set) {
-            if (s.length() > longest.length()) {
-                longest = s;
+        while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) {
+                return false;
             }
+            left++;
+            right--;
         }
-        
-        return longest;
+
+        return true;
     }
 }
