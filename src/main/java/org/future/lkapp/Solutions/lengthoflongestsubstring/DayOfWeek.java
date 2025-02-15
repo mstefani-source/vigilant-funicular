@@ -11,20 +11,19 @@ public enum DayOfWeek {
     FRIDAY("Fr"),
     SATURDAY("Sa"),
     SUNDAY("Su");
-    
+
     private final String label;
 
     DayOfWeek(String string) {
         this.label = string;
     }
 
-
     public static DayOfWeek findByLabel(String label) {
 
         return Arrays.stream(values())
-            .filter(dayOfWeek -> dayOfWeek.label.equals(label)).findFirst()
-            .orElseThrow(() -> 
-                new IllegalArgumentException(MessageFormat.format("Unknown enum label: {0}", label)));
+                .filter(dayOfWeek -> dayOfWeek.label.equals(label)).findFirst()
+                .orElseThrow(
+                        () -> new IllegalArgumentException(MessageFormat.format("Unknown enum label: {0}", label)));
     }
 
 }
