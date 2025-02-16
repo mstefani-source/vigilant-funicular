@@ -9,6 +9,7 @@ import org.future.lkapp.Solutions.reversewordsinastring.*;
 import org.future.lkapp.Solutions.twosum.*;
 import org.future.lkapp.Solutions.addtwonumbers.*;
 import org.future.lkapp.Solutions.lengthoflongestsubstring.*;
+import org.future.lkapp.Solutions.lpc.Lpc;
 import org.future.lkapp.Solutions.lps.LongestPalindromicSubstring;
 import org.future.lkapp.Solutions.zigzag.*;
 
@@ -18,34 +19,8 @@ import org.future.lkapp.Solutions.zigzag.*;
  */
 public class Lk {
 
-    static int LOOP = 100; 
+    // static int LOOP = 100;
     public static void main(String[] args) {
-
-        long startTime = 0;
-        long finishTime = 0;
-        long average = 0;
-        LongestPalindromicSubstring lps = new LongestPalindromicSubstring();
-        for (int i = 0; i < LOOP; i++) {
-            startTime = System.currentTimeMillis();
-            lps.longestPalindrome("vnjwvalrbypfcbqnmopltjnoifmzwgvpzqzsdtvawndpjtpmpjbjionjifqtvvocpeaftvhpdgjjfafunfndztdjkcxyihtsyppendfzzjeyxlbwpdygiqmdqcdbmgyjigrmfkswcwryaydjilqqxvcnyvviesuncslvzikawwqykqwdfibggezufqihcjkebapmgkvwixywgdextafxycnipjglsndkyjoqfyfljfkkvoieksmavdlmlhhnstesibffiopqvlyuidvrawndbzonwzbsjmpeqoglmdbinkovqpzfkxihzitdopnomseqhmrrkcsvrzziphwpuhjngeotwcrebcmbtirkgeavojtmpakcewmexhxacngknokxsvtqobdgckutpexswgwqzbosjpxauyflnylfcxsucsehqvakbpvfmkelmkspsqxnutwfwacpqqvovdqafeylobneojdsgqowcbxfsvuqusdbylcgcvgrofgvzubakjmlbffjhrafvnqttwuyhokzpmhlludpbowuxzrebxsdusalljfjgjkucwzpmndqncykvfnbrxcrcaxwisjpstejjqbpwegpxyrtyafxklgralnkwxkmjpuqfixzkonznmguyizlancpxdzcfkgiotyelegprbaytdhbutbuihkxnbtuqrtezaskfqsmrznfohhlqp");
-            finishTime = System.currentTimeMillis();
-            average += finishTime - startTime;
-        }
-        System.out.format("longestPalindrome time: %d%n", average/LOOP);
-
-        startTime = 0;
-        finishTime = 0;       
-
-        for (int i = 0; i < LOOP; i++) {
-            startTime = System.currentTimeMillis();
-            lps.longestPalindromeRec("vnjwvalrbypfcbqnmopltjnoifmzwgvpzqzsdtvawndpjtpmpjbjionjifqtvvocpeaftvhpdgjjfafunfndztdjkcxyihtsyppendfzzjeyxlbwpdygiqmdqcdbmgyjigrmfkswcwryaydjilqqxvcnyvviesuncslvzikawwqykqwdfibggezufqihcjkebapmgkvwixywgdextafxycnipjglsndkyjoqfyfljfkkvoieksmavdlmlhhnstesibffiopqvlyuidvrawndbzonwzbsjmpeqoglmdbinkovqpzfkxihzitdopnomseqhmrrkcsvrzziphwpuhjngeotwcrebcmbtirkgeavojtmpakcewmexhxacngknokxsvtqobdgckutpexswgwqzbosjpxauyflnylfcxsucsehqvakbpvfmkelmkspsqxnutwfwacpqqvovdqafeylobneojdsgqowcbxfsvuqusdbylcgcvgrofgvzubakjmlbffjhrafvnqttwuyhokzpmhlludpbowuxzrebxsdusalljfjgjkucwzpmndqncykvfnbrxcrcaxwisjpstejjqbpwegpxyrtyafxklgralnkwxkmjpuqfixzkonznmguyizlancpxdzcfkgiotyelegprbaytdhbutbuihkxnbtuqrtezaskfqsmrznfohhlqp");
-            finishTime = System.currentTimeMillis();
-            average += finishTime - startTime;
-        }
-        System.out.format("longestPalindromeRec time: %d%n", average/LOOP);
-
-
-
 
         // ReverseWordsConsumers lk151 = new ReverseWordsConsumers();
         // ReverseWordsByteArrayImputStream ba = new ReverseWordsByteArrayImputStream();
@@ -73,44 +48,6 @@ public class Lk {
         // l2d2.next = l2d1;
 
         // res = sol2.addTwoNumbers(l1, l2);
-
-        // LongestSubString str = new LongestSubString();
-
-        // System.out.println("longest String: " +
-        // str.lengthOfLongestSubstring("pwwkew"));
-        // System.out.println("longest String: " +
-        // str.lengthOfLongestSubstring("bbbbbb"));
-        // System.out.println("longest String: " + str.lengthOfLongestSubstring("aab"));
-        // System.out.println("longest String: " +
-        // str.lengthOfLongestSubstring("dvdf"));
-        // System.out.println("longest String: " +
-        // str.lengthOfLongestSubstring("advsdw"));
-
-        // ZigZag zig = new ZigZag();
-        // Map<Integer, String> testcases = Map.of(
-        // 1, "{'PAYPALISHIRING', 3}",
-        // 2, "{'PAYPALISHIRING', 4}",
-        // 3, "{'A', 3}",
-        // 4, "{'PAYP', 4}");
-
-        // ZigZag zigZag = new ZigZag();
-
-        // System.out.print("waiting for PAHNAPLSIIGYIR got ");
-        // System.out.println(zigZag.convert("PAYPALISHIRING", 3) + " "
-        // + zigZag.convert("PAYPALISHIRING", 3).equals("PAHNAPLSIIGYIR"));
-        // System.out.print("waiting for PINALSIGYAHRPI got ");
-        // System.out.println(zigZag.convert("PAYPALISHIRING", 4) + " "
-        // + zigZag.convert("PAYPALISHIRING", 4).equals("PINALSIGYAHRPI"));
-        // System.out.println(zigZag.convert("PAYP", 2) + " " + zigZag.convert("PAYP",
-        // 2).equals("PYAP"));
-        // System.out.println(zigZag.convert("PAY", 2) + " " + zigZag.convert("PAY",
-        // 2).equals("PYA"));
-        // System.out.println(
-        // zigZag.convert("PAYPAL", 2) + " <-> " + "PYAAPL " + zigZag.convert("PAYPAL",
-        // 2).equals("PYAAPL"));
-        // System.out.println(
-        // zigZag.convert("PAYPAL", 3) + " <-> " + "PAAPLY " + zigZag.convert("PAYPAL",
-        // 3).equals("PAAPLY"));
 
     }
 }
