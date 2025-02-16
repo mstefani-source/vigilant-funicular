@@ -1,6 +1,6 @@
 package org.future.lkapp.Solutions.addtwonumbers;
 
-public class Solution2 {
+public class MyNumbers {
 
     int value1;
     int value2;
@@ -10,7 +10,7 @@ public class Solution2 {
 
         ListNode result = new ListNode();
         ListNode currentDigit = result;
-        
+
         do {
             if (l1 == null) {
                 value1 = 0;
@@ -34,7 +34,6 @@ public class Solution2 {
                 currentDigit.next = new ListNode();
             }
             currentDigit = currentDigit.next;
-
 
         } while (l1 != null || l2 != null);
 
