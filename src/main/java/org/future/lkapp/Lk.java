@@ -8,6 +8,7 @@ import javax.xml.crypto.Data;
 import org.future.lkapp.Solutions.reversewordsinastring.*;
 import org.future.lkapp.Solutions.twosum.*;
 import org.future.lkapp.Solutions.addtwonumbers.*;
+import org.future.lkapp.Solutions.atoi.MyInteger;
 import org.future.lkapp.Solutions.lengthoflongestsubstring.*;
 import org.future.lkapp.Solutions.lpc.Lpc;
 import org.future.lkapp.Solutions.lps.LongestPalindromicSubstring;
@@ -21,7 +22,7 @@ public class Lk {
 
     // static int LOOP = 100;
     public static void main(String[] args) {
-
+        
         // ReverseWordsConsumers lk151 = new ReverseWordsConsumers();
         // ReverseWordsByteArrayImputStream ba = new ReverseWordsByteArrayImputStream();
         // ReverseWordsArray aos = new ReverseWordsArray();
