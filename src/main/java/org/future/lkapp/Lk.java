@@ -1,4 +1,7 @@
 package org.future.lkapp;
+
+import org.future.lkapp.Solutions.lpc.Lpc;
+
 /**
  *
  * @author mstefani
@@ -7,6 +10,10 @@ public class Lk {
 
     // static int LOOP = 100;
     public static void main(String[] args) {
+
+        Lpc lpc = new Lpc();
+        String[] strs = {"fly", "flis", "flo"};
+        lpc.longestCommonPrefix(strs);
         
         // ReverseWordsConsumers lk151 = new ReverseWordsConsumers();
         // ReverseWordsByteArrayImputStream ba = new ReverseWordsByteArrayImputStream();
