@@ -1,27 +1,20 @@
 package org.future.lkapp;
 
-import java.lang.reflect.Array;
-
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import java.util.HashMap;
 import java.util.Map;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 import org.future.lkapp.Solutions.lengthoflongestsubstring.LongestSubString;
 import org.future.lkapp.Solutions.lpc.Lpc;
 import org.future.lkapp.Solutions.lps.LongestPalindromicSubstring;
 import org.future.lkapp.Solutions.palindrome.Palindrome;
 import org.future.lkapp.Solutions.zigzag.ZigZag;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.junit.jupiter.api.Order;
-import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 
 @DisplayName("A special test case")
 @TestMethodOrder(OrderAnnotation.class)
@@ -77,5 +70,25 @@ public class LkTests {
         for (Map.Entry<String, String[]> entry : testCase.entrySet()) {
             assertTrue(entry.getKey().equals(zigZag.convert(entry.getValue()[1], Integer.parseInt(entry.getValue()[0]))));
         }
+    }
+
+    @Test
+    @Order(6)
+    @DisplayName("Longest Palindrome Substring")
+    public void lpcTest(){
+        Lpc lpc = new Lpc();
+        String[] strs = {"fly", "flis", "flo"};
+        String[] oneLetter = {"a"};
+        String[] noPrefix = {"fly", "flis", "hlo"};
+        String[] differentLen = {"fly", "flis", "flo", "fl"};
+        String[] empty = {""};
+        String[] ab = {"ab", "a"};
+
+        assertTrue(lpc.longestCommonPrefix(strs).equals("fl"));
+        assertTrue(lpc.longestCommonPrefix(oneLetter).equals("a"));
+        assertTrue(lpc.longestCommonPrefix(noPrefix).equals(""));
+        assertTrue(lpc.longestCommonPrefix(differentLen).equals("fl"));
+        assertTrue(lpc.longestCommonPrefix(empty).equals(""));
+        assertTrue(lpc.longestCommonPrefix(ab).equals("a"));
     }
 }

@@ -1,18 +1,5 @@
 package org.future.lkapp;
 
-import java.util.Date;
-import java.util.Map;
-
-import javax.xml.crypto.Data;
-
-import org.future.lkapp.Solutions.reversewordsinastring.*;
-import org.future.lkapp.Solutions.twosum.*;
-import org.future.lkapp.Solutions.addtwonumbers.*;
-import org.future.lkapp.Solutions.lengthoflongestsubstring.*;
-import org.future.lkapp.Solutions.lpc.Lpc;
-import org.future.lkapp.Solutions.lps.LongestPalindromicSubstring;
-import org.future.lkapp.Solutions.zigzag.*;
-
 /**
  *
  * @author mstefani
