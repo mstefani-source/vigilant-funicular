@@ -4,21 +4,17 @@ public class Lpc {
     public String longestCommonPrefix(String[] strs) {
 
         int index = 0;
-        String subs = "";
+        String subs;
         String result = "";
-        boolean weReachTheEnd = true;
-        while (weReachTheEnd) {
-            result = subs;
+        
+        while (index <= strs[0].length()) {
             subs = strs[0].substring(0, index);
-            weReachTheEnd = true;
             for (String str : strs) {
-                if (!str.substring(0, index).equals(subs)) {
-                    weReachTheEnd = false;
-                    return result;
-                    // result = strs[0].substring(0, index);// return strs[0].substring(0, index);
+                if (index > str.length() || !str.substring(0, index).equals(subs)) {
+                    return result;  
                 } 
-                // if (str.length() <= index)  weReachTheEnd = true;
             }
+            result = subs;
             index++;
         }
         return result;

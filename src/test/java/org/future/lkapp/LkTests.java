@@ -96,4 +96,24 @@ public class LkTests {
         // assertTrue(myInteger.reverse(123) == 321);
         // assertTrue(myInteger.reverse(123) == 321);
     }
+
+    @Test
+    @Order(8)
+    @DisplayName("Longest Palindrome Substring")
+    public void lpcTest(){
+        Lpc lpc = new Lpc();
+        String[] strs = {"fly", "flis", "flo"};
+        String[] oneLetter = {"a"};
+        String[] noPrefix = {"fly", "flis", "hlo"};
+        String[] differentLen = {"fly", "flis", "flo", "fl"};
+        String[] empty = {""};
+        String[] ab = {"ab", "a"};
+
+        assertTrue(lpc.longestCommonPrefix(strs).equals("fl"));
+        assertTrue(lpc.longestCommonPrefix(oneLetter).equals("a"));
+        assertTrue(lpc.longestCommonPrefix(noPrefix).equals(""));
+        assertTrue(lpc.longestCommonPrefix(differentLen).equals("fl"));
+        assertTrue(lpc.longestCommonPrefix(empty).equals(""));
+        assertTrue(lpc.longestCommonPrefix(ab).equals("a"));
+    }
 }
