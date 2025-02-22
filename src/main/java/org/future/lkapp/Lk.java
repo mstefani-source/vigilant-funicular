@@ -13,13 +13,12 @@ public class Lk {
     public static void main(String[] args) {
 
         TreeNode p = 
-            new TreeNode(1, new TreeNode(2), new TreeNode(1));        
+            new TreeNode(1, new TreeNode(2), new TreeNode(3) );        
         TreeNode q = 
-            new TreeNode(1, new TreeNode(2), new TreeNode(2));
+            new TreeNode(1, new TreeNode(2), new TreeNode(3));
 
         SameTreeSolution sts = new SameTreeSolution();
         System.out.println(sts.isSameTree(p, q));
-
 
         // ReverseWordsConsumers lk151 = new ReverseWordsConsumers();
         // ReverseWordsByteArrayImputStream ba = new ReverseWordsByteArrayImputStream();
