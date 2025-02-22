@@ -1,5 +1,8 @@
 package org.future.lkapp;
 
+import org.future.lkapp.Solutions.sametree.SameTreeSolution;
+import org.future.lkapp.Solutions.sametree.TreeNode;
+
 /**
  *
  * @author mstefani
@@ -8,6 +11,15 @@ public class Lk {
 
     // static int LOOP = 100;
     public static void main(String[] args) {
+
+        TreeNode p = 
+            new TreeNode(1, new TreeNode(2), new TreeNode(1));        
+        TreeNode q = 
+            new TreeNode(1, new TreeNode(2), new TreeNode(2));
+
+        SameTreeSolution sts = new SameTreeSolution();
+        System.out.println(sts.isSameTree(p, q));
+
 
         // ReverseWordsConsumers lk151 = new ReverseWordsConsumers();
         // ReverseWordsByteArrayImputStream ba = new ReverseWordsByteArrayImputStream();
