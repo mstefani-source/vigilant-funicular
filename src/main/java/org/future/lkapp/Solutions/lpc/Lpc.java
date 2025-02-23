@@ -13,26 +13,16 @@ public class Lpc {
         Integer minlen = asl.stream()
                 .map(str -> str.length()).min(Integer::compare).get();
 
-        while (true) {
-
-            String minPrefix = strs[0].substring(0, minlen);
-
-            if (isPrefixedForAll(asl, minPrefix)) {
-                return minPrefix;
-            } else {
-               minlen--; 
+        String minPrefix = strs[0].substring(0, minlen);
+        for (int i = 1; i < strs.length; i++) {
+            String strToCheck = strs[i];
+            while (!strToCheck.startsWith(minPrefix)) {
+                minlen--;
+                minPrefix = strs[0].substring(0, minlen);
             }
+            if (minPrefix.equals("")) return "";
         }
-    }
-
-    private boolean isPrefixedForAll(List<String> list, String prefix) {
-
-        return list.stream()
-                .allMatch(startWithPrefix(prefix));
-    }
-
-    private Predicate<String> startWithPrefix(String prefix) {
-        return str -> str.startsWith(prefix);
+        return minPrefix;
     }
 
 }
