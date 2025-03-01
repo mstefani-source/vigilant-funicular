@@ -30,9 +30,6 @@ public class LongestPalindromicSubstring {
             return "";
         }
 
-        result.isEmpty();
-        result.isBlank();
-
         if (isPalindrome(s))
             return s;
         int leftIndex = 0;
