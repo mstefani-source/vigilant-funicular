@@ -1,6 +1,5 @@
 package org.future.lkapp.Solutions.sametree;
 
-import java.util.Objects;
 
 /**
  * 
@@ -8,7 +7,6 @@ import java.util.Objects;
 
 public class SameTreeSolution {
     public boolean isSameTree(TreeNode p, TreeNode q) {
-        int index = 0;
 
         if (p.left != null && q.left != null && p.left.value == q.left.value) {
             isSameTree(p.left, q.left);

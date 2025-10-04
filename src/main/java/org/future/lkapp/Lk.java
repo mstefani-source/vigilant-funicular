@@ -15,12 +15,28 @@ public class Lk {
     // static int LOOP = 100;
     public static void main(String[] args) {
 
+        // Create a sample tree:
+        //         1
+        //        / \
+        //       2   2
+        //      / \
+        //     3   3
+        //    / \
+        //   4   4
 
+        TreeNode root = new TreeNode(1,
+                new TreeNode(2,
+                        new TreeNode(3),
+                        new TreeNode(3, 
+                            new TreeNode(4), 
+                            new TreeNode(4))
+                        ),
+                new TreeNode(2));
 
-        // TreeNode p = 
-        //     new TreeNode(1, new TreeNode(2), new TreeNode(3));        
-        // TreeNode q = 
-        //     new TreeNode(1, new TreeNode(2), new TreeNode(3));
+        // TreeNode p =
+        // new TreeNode(1, new TreeNode(2), new TreeNode(3));
+        // TreeNode q =
+        // new TreeNode(1, new TreeNode(2), new TreeNode(3));
 
         // SameTreeSolution sts = new SameTreeSolution();
         // System.out.println(sts.isSameTree(p, q));
@@ -41,13 +57,12 @@ public class Lk {
         l1.next = l2;
         l2.next = l3;
         l3.next = l4;
-        
+
         Remnnode rn = new Remnnode();
         NodeService ns = new NodeService();
+
         System.out.println(ns.printNode(l1));
-
         System.out.println(ns.printNode(rn.removeNthFromEnd(l1, 2)));
-
 
     }
 }
