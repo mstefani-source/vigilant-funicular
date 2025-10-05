@@ -2,6 +2,17 @@ package org.future.lkapp.Solutions.lru;
 
 public class CustomQueue<T> {
 
+    private static class Node<U> {
+        U value;
+
+        Node<U> next;
+        Node<U> prev;
+
+        Node(U value) {
+            this.value = value;
+        }
+    }
+
     private Node<T> head;
     private Node<T> tail;
     private int size;
@@ -114,14 +125,4 @@ public class CustomQueue<T> {
         }
     }
 
-    private class Node<T> {
-        T value;
-
-        Node<T> next;
-        Node<T> prev;
-
-        Node(T value) {
-            this.value = value;
-        }
-    }
 }

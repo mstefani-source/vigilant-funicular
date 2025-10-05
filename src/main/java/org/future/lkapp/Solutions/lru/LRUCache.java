@@ -5,6 +5,19 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class LRUCache<K, V> {
 
+    private static class Node<I, J> {
+        I key;
+        J value;
+
+        Node<I, J> next;
+        Node<I, J> prev;
+
+        Node(I key, J value) {
+            this.value = value;
+            this.key = key;
+        }
+    }
+
     private final ReentrantLock lock = new ReentrantLock();
     private final int capacity;
     private Node<K, V> head;
@@ -12,15 +25,14 @@ public class LRUCache<K, V> {
 
     ConcurrentHashMap<K, Node<K, V>> cache;
 
-    public <K, V> LRUCache(int capacity) {
+    public LRUCache(int capacity) {
         this.capacity = capacity;
-        this.cache = new ConcurrentHashMap<>();
+        this.cache = new ConcurrentHashMap<K, Node<K, V>>();
     }
 
     public V get(K key) {
         lock.lock();
         try {
-
             if (cache.containsKey(key)) {
                 Node<K, V> node = cache.get(key);
                 if (node == head) {
@@ -68,16 +80,4 @@ public class LRUCache<K, V> {
         head.prev = null;
     }
 
-    private class Node<K, V> {
-        K key;
-        V value;
-
-        Node<K, V> next;
-        Node<K, V> prev;
-
-        Node(K key, V value) {
-            this.value = value;
-            this.key = key;
-        }
-    }
 }
