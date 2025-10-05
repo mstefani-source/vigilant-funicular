@@ -1,6 +1,8 @@
 package org.future.lkapp;
 
 import org.future.lkapp.Solutions.addtwonumbers.ListNode;
+import org.future.lkapp.Solutions.balanced_binary_tree.Bbt;
+import org.future.lkapp.Solutions.balanced_binary_tree.bbt;
 import org.future.lkapp.Solutions.remnnode.NodeService;
 import org.future.lkapp.Solutions.remnnode.Remnnode;
 import org.future.lkapp.Solutions.sametree.SameTreeSolution;
@@ -33,6 +35,12 @@ public class Lk {
                         ),
                 new TreeNode(2));
 
+
+        Bbt bbt = new Bbt();
+
+        bbt.goDig(root);
+        System.out.println("counter " + bbt.getRightCounter());
+
         // TreeNode p =
         // new TreeNode(1, new TreeNode(2), new TreeNode(3));
         // TreeNode q =
@@ -49,20 +57,20 @@ public class Lk {
 
         // DayOfWeek.findByLabel("Su");
 
-        ListNode l1 = new ListNode(1);
-        ListNode l2 = new ListNode(2);
-        ListNode l3 = new ListNode(3);
-        ListNode l4 = new ListNode(4);
+        // ListNode l1 = new ListNode(1);
+        // ListNode l2 = new ListNode(2);
+        // ListNode l3 = new ListNode(3);
+        // ListNode l4 = new ListNode(4);
 
-        l1.next = l2;
-        l2.next = l3;
-        l3.next = l4;
+        // l1.next = l2;
+        // l2.next = l3;
+        // l3.next = l4;
 
-        Remnnode rn = new Remnnode();
-        NodeService ns = new NodeService();
+        // Remnnode rn = new Remnnode();
+        // NodeService ns = new NodeService();
 
-        System.out.println(ns.printNode(l1));
-        System.out.println(ns.printNode(rn.removeNthFromEnd(l1, 2)));
+        // System.out.println(ns.printNode(l1));
+        // System.out.println(ns.printNode(rn.removeNthFromEnd(l1, 2)));
 
     }
 }
