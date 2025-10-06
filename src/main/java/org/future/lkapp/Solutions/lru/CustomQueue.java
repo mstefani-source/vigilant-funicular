@@ -1,26 +1,28 @@
 package org.future.lkapp.Solutions.lru;
 
-public class CustomQueue<T> {
+public class CustomQueue<K, V> {
 
-    private static class Node<U> {
-        U value;
+    private static class Node<I, J> {
+        I key;
+        J value;
 
-        Node<U> next;
-        Node<U> prev;
+        Node<I, J> next;
+        Node<I, J> prev;
 
-        Node(U value) {
+        Node(I key, J value) {
             this.value = value;
+            this.key = key;
         }
     }
 
-    private Node<T> head;
-    private Node<T> tail;
+    private Node<K, V> head;
+    private Node<K, V> tail;
     private int size;
     private Object lock = new Object();
 
-    public void addLast(T value) {
+    public void addLast(K key, V value) {
         synchronized (lock) {
-            Node<T> toAdd = new Node<T>(value);
+            Node<K, V> toAdd = new Node<K, V>(key, value);
             toAdd.prev = tail;
             if (tail != null) {
                 tail.next = toAdd;
@@ -33,9 +35,9 @@ public class CustomQueue<T> {
         }
     }
 
-    public void addFirst(T value) {
+    public void addFirst(K key, V value) {
         synchronized (lock) {
-            Node<T> toAdd = new Node<T>(value);
+            Node<K, V> toAdd = new Node<K, V>(key, value);
             if (head != null) {
                 toAdd.next = head;
                 head.prev = toAdd;
@@ -61,7 +63,7 @@ public class CustomQueue<T> {
             return;
         }
 
-        Node<T> toRemove = tail;
+        Node<K, V> toRemove = tail;
         tail = tail.prev;
 
         tail.next = null;
@@ -82,19 +84,19 @@ public class CustomQueue<T> {
             return;
         }
 
-        Node<T> toRemove = head;
+        Node<K, V> toRemove = head;
         head = head.next;
         head.prev = null;
         toRemove.next = null;
         size--;
     }
 
-    public void remove(T value) {
+    public void remove(K key, V value) {
         if (this.isEmpty()) {
             return;
         }
 
-        Node<T> pointer = head;
+        Node<K, V> pointer = head;
 
         while (pointer.next != null) {
             if (value == pointer.value) {
@@ -108,14 +110,14 @@ public class CustomQueue<T> {
         return size == 0;
     }
 
-    private void doRemoveLogic(Node<T> toRemove) {
+    private void doRemoveLogic(Node<K, V> toRemove) {
         if (toRemove == head) {
             removeFirst();
         } else if (toRemove == tail) {
             removeLast();
         } else {
-            Node<T> prevNode = toRemove.prev;
-            Node<T> nextNode = toRemove.next;
+            Node<K, V> prevNode = toRemove.prev;
+            Node<K, V> nextNode = toRemove.next;
 
             prevNode.next = nextNode;
             nextNode.prev = prevNode;

@@ -1,83 +1,63 @@
 package org.future.lkapp.Solutions.lru;
 
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.locks.ReentrantLock;
+import java.util.HashMap;
 
-public class LRUCache<K, V> {
+class LRUCache {
 
-    private static class Node<I, J> {
-        I key;
-        J value;
-
-        Node<I, J> next;
-        Node<I, J> prev;
-
-        Node(I key, J value) {
-            this.value = value;
-            this.key = key;
-        }
-    }
-
-    private final ReentrantLock lock = new ReentrantLock();
-    private final int capacity;
-    private Node<K, V> head;
-    private Node<K, V> tail;
-
-    ConcurrentHashMap<K, Node<K, V>> cache;
+    private final int capacity; 
+    HashMap <Integer, Node<Integer, Integer>> cache = new HashMap<>();
+    Node <Integer, Integer> first;
+    Node <Integer, Integer> last;
 
     public LRUCache(int capacity) {
         this.capacity = capacity;
-        this.cache = new ConcurrentHashMap<K, Node<K, V>>();
     }
+    
+    public int get(int key) {
+        if (cache.containsKey(key)) {
+            first = cache.get(key);
+            return (int) first.value;
+        } else {
+            return -1;
+        }
+    }
+    
+    public void put(int key, int value) {
+        Node <Integer, Integer> toAdd = new Node<>(key, value);
+        if (cache.size() == 0) {
+            first = toAdd;
+            last = toAdd;
+            cache.put(key, first);
+            return;
+        }
 
-    public V get(K key) {
-        lock.lock();
-        try {
-            if (cache.containsKey(key)) {
-                Node<K, V> node = cache.get(key);
-                if (node == head) {
-                    return node.value;
-                }
-                if (node == tail) {
-                    tail.next = null;
-                    tail = tail.prev;
-                } else {
-                    Node<K, V> previousNode = node.prev;
-                    Node<K, V> nextNode = node.next;
-                    previousNode.next = nextNode;
-                    nextNode.prev = previousNode;
-                }
-                moveHead(node);
-                return node.value;
+        toAdd.next = first;
+        first.prev = toAdd;
+        first = toAdd;
+
+        if (cache.size() < capacity) {
+            cache.put(key, first);
+        } else {
+            cache.remove(last.key);
+            if (last.prev != null){
+              last = last.prev;
             }
-            return null;
-        } finally {
-            lock.unlock();
+            last.next = null;
+            cache.put(key, first);
         }
     }
 
-    public void put(K key, V value) {
-        Node<K, V> node = new Node<K, V>(key, value);
-        node.next = head;
-        head.prev = node;
-        head = node;
-        if (cache.isEmpty()) {
-            tail = node;
-        }
-        if (cache.size() == capacity) {
-            K keyToDel = tail.key;
-            cache.remove(keyToDel);
-            tail = tail.prev;
-            tail.next = null;
-        }
-        cache.put(key, node);
-    }
+    private static class Node <K, V> {
 
-    private void moveHead(Node<K, V> node) {
-        node.next = head;
-        head.prev = node;
-        head = node;
-        head.prev = null;
-    }
+        K key;
+        V value;
+        Node <K, V> next;
+        Node <K, V> prev;
 
+        Node(K key, V value){
+            this.key = key;
+            this.value = value;
+        }
+    }
 }
+
