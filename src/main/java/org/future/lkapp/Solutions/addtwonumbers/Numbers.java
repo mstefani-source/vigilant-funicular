@@ -43,7 +43,6 @@ public class Numbers {
         ListNode l1_start = l1;
         ListNode l2_start = l2;
         ListNode inMemory = new ListNode();
-        NodeService ns = new NodeService();
         int reminder = 0;
 
         while (l1 != null || l2 != null) {
@@ -63,7 +62,6 @@ public class Numbers {
                 l2 = l2.next;
             }
         }
-        System.out.println("l1_start= " + ns.printNode(l1_start) + " " + "l2_start= " + ns.printNode(l2_start));
 
         while (l1_start != null) {
             inMemory.val = l1_start.val + l2_start.val;
@@ -75,7 +73,6 @@ public class Numbers {
             l1_start = l1_start.next;
             l2_start = l2_start.next;
         }
-        System.out.println("inMemory= " + ns.printNode(inMemory));
 
         while (inMemory != null) {
             if (inMemory.val + reminder > 9) {
