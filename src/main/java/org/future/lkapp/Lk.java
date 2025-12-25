@@ -1,11 +1,6 @@
 package org.future.lkapp;
 
-import org.future.lkapp.Solutions.addtwonumbers.ListNode;
-import org.future.lkapp.Solutions.addtwonumbers.Numbers;
-import org.future.lkapp.Solutions.remnnode.NodeService;
-import org.future.lkapp.Solutions.remnnode.Remnnode;
-import org.future.lkapp.Solutions.sametree.SameTreeSolution;
-import org.future.lkapp.Solutions.sametree.TreeNode;
+import org.future.lkapp.Solutions.vkproblem.VkProblem;
 
 /**
  *
@@ -16,6 +11,9 @@ public class Lk {
     // static int LOOP = 100;
     public static void main(String[] args) {
 
+        VkProblem vk = new VkProblem();
+        System.out.println(vk.convertUrl("Hello Java  "));
+
         // Create a sample tree:
         //         1
         //        / \
@@ -25,14 +23,14 @@ public class Lk {
         //    / \
         //   4   4
 
-        TreeNode root = new TreeNode(1,
-                new TreeNode(2,
-                        new TreeNode(3),
-                        new TreeNode(3, 
-                            new TreeNode(4), 
-                            new TreeNode(4))
-                        ),
-                new TreeNode(2));
+        // TreeNode root = new TreeNode(1,
+        //         new TreeNode(2,
+        //                 new TreeNode(3),
+        //                 new TreeNode(3, 
+        //                     new TreeNode(4), 
+        //                     new TreeNode(4))
+        //                 ),
+        //         new TreeNode(2));
 
 
         // Bbt bbt = new Bbt();
@@ -56,36 +54,36 @@ public class Lk {
 
         // DayOfWeek.findByLabel("Su");
 
-        ListNode l1 = new ListNode(7);
-        ListNode l2 = new ListNode(2);
-        ListNode l3 = new ListNode(4);
-        ListNode l4 = new ListNode(3);
+        // ListNode l1 = new ListNode(7);
+        // ListNode l2 = new ListNode(2);
+        // ListNode l3 = new ListNode(4);
+        // ListNode l4 = new ListNode(3);
 
-        l1.next = l2;
-        l2.next = l3;
-        l3.next = l4;
+        // l1.next = l2;
+        // l2.next = l3;
+        // l3.next = l4;
 
-        ListNode b1 = new ListNode(5);
-        ListNode b2 = new ListNode(6);
-        ListNode b3 = new ListNode(4);
+        // ListNode b1 = new ListNode(5);
+        // ListNode b2 = new ListNode(6);
+        // ListNode b3 = new ListNode(4);
 
-        b1.next = b2;
-        b2.next = b3;
+        // b1.next = b2;
+        // b2.next = b3;
 
-        ListNode f1 = new ListNode(1);
-        ListNode f2 = new ListNode(9,new ListNode(9));
+        // ListNode f1 = new ListNode(1);
+        // ListNode f2 = new ListNode(9,new ListNode(9));
 
 
 
-        // Remnnode rn = new Remnnode();
-        NodeService ns = new NodeService();
-        // System.out.println(ns.printNode(l1));
+        // // Remnnode rn = new Remnnode();
+        // NodeService ns = new NodeService();
+        // // System.out.println(ns.printNode(l1));
 
-        // System.out.println(ns.printNode(rn.removeNthFromEnd(l1, 2)));
+        // // System.out.println(ns.printNode(rn.removeNthFromEnd(l1, 2)));
 
-        Numbers numbers = new Numbers();
+        // Numbers numbers = new Numbers();
 
-        System.out.println("result " + ns.printNode(numbers.addTwoNumbers2(f1, f2)));
+        // System.out.println("result " + ns.printNode(numbers.addTwoNumbers2(f1, f2)));
 
     }
 }
