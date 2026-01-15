@@ -16,8 +16,8 @@ public class Lk {
     public static void main(String[] args) {
 
         List<Integer> al = List.of(1,1,2,2,3,4,3,5,7,5,7);
-        SberQuestion sq = new SberQuestion(al);
-        System.out.println(sq.findUnique());
+        SberQuestion sq = new SberQuestion();
+        System.out.println(sq.findUniqueFast(al));
         
 
 

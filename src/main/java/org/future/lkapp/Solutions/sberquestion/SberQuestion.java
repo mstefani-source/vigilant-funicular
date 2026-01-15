@@ -1,39 +1,22 @@
 package org.future.lkapp.Solutions.sberquestion;
 
+import java.util.HashMap;
 import java.util.List;
 
 public class SberQuestion {
 
-    private final List<Integer> arr;
+    public boolean findUniqueFast(List<Integer> lst) {
 
-    public SberQuestion(List<Integer> al) {
-        this.arr = al;
-    }
+        HashMap<Integer, Integer> hm = new HashMap<>();
 
-    public boolean findUnique() {
-
-        for (int i = 0; i < arr.size(); i++) {
-            if (unique(i)) {
-                return true;
+        for (int i = 0; i < lst.size(); i++) {
+            Integer current = lst.get(i);
+            if (hm.get(current) == null) {
+                hm.put(current, 1);
+            } else {
+                hm.put(current, hm.get(current) + 1);
             }
         }
-
-        return false;
+        return hm.containsValue(1);
     }
-
-    private boolean unique(int digit) {
-        int count = 0;
-        for(int i = 0; i < arr.size(); i++) {
-            if (i == digit) {
-                count++;
-            }
-        }
-        if (count > 1) {
-            return false;
-        } else {
-            return true;
-        }
-    }
-
-
 }
