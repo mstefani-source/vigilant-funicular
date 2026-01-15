@@ -1,5 +1,9 @@
 package org.future.lkapp;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.future.lkapp.Solutions.sberquestion.SberQuestion;
 import org.future.lkapp.Solutions.vkproblem.VkProblem;
 
 /**
@@ -11,8 +15,14 @@ public class Lk {
     // static int LOOP = 100;
     public static void main(String[] args) {
 
-        VkProblem vk = new VkProblem();
-        System.out.println(vk.convertUrl("Hello Java  "));
+        List<Integer> al = List.of(1,1,2,2,3,4,3,5,7,5,7);
+        SberQuestion sq = new SberQuestion(al);
+        System.out.println(sq.findUnique());
+        
+
+
+        // VkProblem vk = new VkProblem();
+        // System.out.println(vk.convertUrl("Hello Java  "));
 
         // Create a sample tree:
         //         1
