@@ -1,6 +1,7 @@
 package org.future.lkapp;
 
-import org.future.lkapp.Solutions.vkproblem.VkProblem;
+import org.future.lkapp.Solutions.linkedinproblem.ABCcalc;
+import org.future.lkapp.Solutions.luckyticket.LuckyTicket;
 
 /**
  *
@@ -11,8 +12,17 @@ public class Lk {
     // static int LOOP = 100;
     public static void main(String[] args) {
 
-        VkProblem vk = new VkProblem();
-        System.out.println(vk.convertUrl("Hello Java  "));
+
+        LuckyTicket lt = new LuckyTicket();
+        System.out.println(lt.check("123423"));
+        // ABCcalc abc = new ABCcalc();
+        // System.out.println(abc.calcword("HelloJava45"));
+        // List<Integer> al = List.of(1,1,2,2,3,4,3,5,7,5,7);
+        // SberQuestion sq = new SberQuestion(al);
+        // System.out.println(sq.findUnique());
+        
+        // VkProblem vk = new VkProblem();
+        // System.out.println(vk.convertUrl("Hello Java  "));
 
         // Create a sample tree:
         //         1
