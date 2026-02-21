@@ -1,7 +1,6 @@
 package org.future.lkapp;
 
-import org.future.lkapp.Solutions.linkedinproblem.ABCcalc;
-import org.future.lkapp.Solutions.luckyticket.LuckyTicket;
+import org.future.lkapp.Solutions.sberproblem.LuckyTicket;
 
 /**
  *
