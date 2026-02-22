@@ -6,14 +6,6 @@ package org.future.lkapp.Solutions.sberquestion;
 public class Binery {
 
     public boolean search(int[] arr, Integer searchNum) {
-        // int testNumber = arr[arr.length / 2];
-        // if (testNumber == searchNum) {
-        // return true;
-        // }
-        // if (testNumber > searchNum) {
-        // // search(arr[arr.length / 2] - arr[arr.length] , searchNum)
-        // }
-        // return true;
 
         int lowerBound = 0;
         int upperBound = arr.length;
