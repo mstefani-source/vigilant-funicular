@@ -1,7 +1,11 @@
 package org.future.lkapp;
 
-import org.future.lkapp.Solutions.linkedinproblem.ABCcalc;
-import org.future.lkapp.Solutions.luckyticket.LuckyTicket;
+import java.util.List;
+
+import org.future.lkapp.Solutions.sberquestion.SberQuestion;
+
+// import org.future.lkapp.Solutions.linkedinproblem.ABCcalc;
+// import org.future.lkapp.Solutions.luckyticket.LuckyTicket;
 
 /**
  *
@@ -11,13 +15,16 @@ public class Lk {
 
     // static int LOOP = 100;
     public static void main(String[] args) {
+        
+        List<Integer> al = List.of(1,1,2,2,3,4,4,5,7,5,7);
+        SberQuestion sq = new SberQuestion();
 
-
-        LuckyTicket lt = new LuckyTicket();
-        System.out.println(lt.check("123423"));
+        System.out.println(sq.findUniqueBySet(al));
+        
+        // LuckyTicket lt = new LuckyTicket();
+        // System.out.println(lt.check("123423"));
         // ABCcalc abc = new ABCcalc();
         // System.out.println(abc.calcword("HelloJava45"));
-        // List<Integer> al = List.of(1,1,2,2,3,4,3,5,7,5,7);
         // SberQuestion sq = new SberQuestion(al);
         // System.out.println(sq.findUnique());
         

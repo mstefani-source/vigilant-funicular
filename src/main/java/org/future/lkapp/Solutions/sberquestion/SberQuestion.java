@@ -1,39 +1,22 @@
 package org.future.lkapp.Solutions.sberquestion;
 
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class SberQuestion {
 
-    private final List<Integer> arr;
+    public boolean findUniqueBySet(List<Integer> list) {
 
-    public SberQuestion(List<Integer> al) {
-        this.arr = al;
+        Set<Integer> setUnique = new HashSet<>();
+        Map<Integer, Boolean> map = new HashMap<>();
+
+        list.forEach((el) -> {
+            map.put(el, setUnique.add(el));
+        });
+
+        return map.containsValue(true);
     }
-
-    public boolean findUnique() {
-
-        for (int i = 0; i < arr.size(); i++) {
-            if (unique(i)) {
-                return true;
-            }
-        }
-
-        return false;
-    }
-
-    private boolean unique(int digit) {
-        int count = 0;
-        for(int i = 0; i < arr.size(); i++) {
-            if (i == digit) {
-                count++;
-            }
-        }
-        if (count > 1) {
-            return false;
-        } else {
-            return true;
-        }
-    }
-
-
 }
