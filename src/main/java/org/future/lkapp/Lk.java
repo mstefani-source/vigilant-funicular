@@ -1,7 +1,8 @@
 package org.future.lkapp;
 
-import org.future.lkapp.Solutions.linkedinproblem.ABCcalc;
-import org.future.lkapp.Solutions.luckyticket.LuckyTicket;
+import java.util.List;
+
+import org.future.lkapp.Solutions.sberquestion.Binery;
 
 /**
  *
@@ -12,9 +13,22 @@ public class Lk {
     // static int LOOP = 100;
     public static void main(String[] args) {
 
+        List<Integer> arr = List.of(1,2,3,4,5,6,6,7,7,8,9,9,10);
 
-        LuckyTicket lt = new LuckyTicket();
-        System.out.println(lt.check("123423"));
+        Binery binery = new Binery();
+
+        int [] arr1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int [] arr2 = {1, 7, 8, 9, 98};
+        int [] arr3 = {1, 100};
+        int [] arr4 = {1};
+
+        // System.out.println("find 8 " + binery.search(arr1, 1));
+        // System.out.println("find 8 " + binery.search(arr2, 7));
+        System.out.println("find 8 " + binery.search(arr3, 1));
+        System.out.println("find 8 " + binery.search(arr4, 5));
+
+        // LuckyTicket lt = new LuckyTicket();
+        // System.out.println(lt.check("123423"));
         // ABCcalc abc = new ABCcalc();
         // System.out.println(abc.calcword("HelloJava45"));
         // List<Integer> al = List.of(1,1,2,2,3,4,3,5,7,5,7);

@@ -1,6 +1,8 @@
 package org.future.lkapp.Solutions.sberquestion;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class SberQuestion {
 
@@ -10,7 +12,7 @@ public class SberQuestion {
         this.arr = al;
     }
 
-    public boolean findUnique() {
+    public boolean findUniqueFor() {
 
         for (int i = 0; i < arr.size(); i++) {
             if (unique(i)) {
