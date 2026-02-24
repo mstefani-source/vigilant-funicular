@@ -9,14 +9,13 @@ import java.util.Set;
 public class SberQuestion {
 
     public boolean findUniqueBySet(List<Integer> list) {
+        Set<Integer> uSet = new HashSet<>();
+        Map<Integer, Boolean> uMap = new HashMap<>();
 
-        Set<Integer> setUnique = new HashSet<>();
-        Map<Integer, Boolean> map = new HashMap<>();
-
-        list.forEach((el) -> {
-            map.put(el, setUnique.add(el));
+        list.forEach((el)->{
+            uMap.put(el, uSet.add(el));
         });
 
-        return map.containsValue(true);
+        return uMap.containsValue(true);
     }
 }
