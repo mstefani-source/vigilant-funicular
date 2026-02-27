@@ -47,16 +47,14 @@ public class Numbers {
 
         while (l1 != null || l2 != null) {
             if (l1 == null) {
-                ListNode node = new ListNode();
-                node.next = l1_start;
+                ListNode node = new ListNode(0, l1_start);
                 l1_start = node;
             } else {
                 l1 = l1.next;
             }
 
             if (l2 == null) {
-                ListNode node = new ListNode();
-                node.next = l2_start;
+                ListNode node = new ListNode(0, l2_start);
                 l2_start = node;
             } else {
                 l2 = l2.next;
@@ -66,8 +64,7 @@ public class Numbers {
         while (l1_start != null) {
             inMemory.val = l1_start.val + l2_start.val;
             if (l1_start.next != null) {
-                runner = new ListNode();
-                runner.next = inMemory;
+                runner = new ListNode(0, inMemory);
                 inMemory = runner;
             }
             l1_start = l1_start.next;
@@ -86,7 +83,9 @@ public class Numbers {
             if (inMemory.next != null) {
                 runner = new ListNode(0, result);
             } else {
-                if (reminder == 1) runner = new ListNode(1, result);
+                if (reminder == 1) {
+                    runner = new ListNode(1, result);
+                }
             }
             result = runner;
             inMemory = inMemory.next;
