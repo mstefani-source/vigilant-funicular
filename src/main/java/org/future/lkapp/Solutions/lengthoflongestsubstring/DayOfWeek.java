@@ -21,7 +21,8 @@ public enum DayOfWeek {
     public static DayOfWeek findByLabel(String label) {
 
         return Arrays.stream(values())
-                .filter(dayOfWeek -> dayOfWeek.label.equals(label)).findFirst()
+                .filter(dayOfWeek -> dayOfWeek.label.equals(label))
+                .findFirst()
                 .orElseThrow(
                         () -> new IllegalArgumentException(MessageFormat.format("Unknown enum label: {0}", label)));
     }

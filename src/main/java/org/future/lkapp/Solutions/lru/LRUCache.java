@@ -12,7 +12,7 @@ public class LRUCache<K, V> {
 
     ConcurrentHashMap<K, Node<K, V>> cache;
 
-    public <K, V> LRUCache(int capacity) {
+    public LRUCache(int capacity) {
         this.capacity = capacity;
         this.cache = new ConcurrentHashMap<>();
     }
@@ -68,7 +68,7 @@ public class LRUCache<K, V> {
         head.prev = null;
     }
 
-    private class Node<K, V> {
+    private class Node <K, V> {
         K key;
         V value;
 
@@ -79,5 +79,8 @@ public class LRUCache<K, V> {
             this.value = value;
             this.key = key;
         }
+         
+  
+ 
     }
 }

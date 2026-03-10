@@ -2,6 +2,7 @@ package org.future.lkapp.Solutions.vkproblem;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import org.future.lkapp.Solutions.vproblem.VkProblem;
 import org.junit.jupiter.api.Test;
 
 public class VkProblemTest {
@@ -10,7 +11,7 @@ public class VkProblemTest {
     public void compilrtest() {
         VkProblem testProblem = new VkProblem();
 
-        String testString = "Java test";
+        String testString = "Java test  ";
 
         assertEquals(testString, testProblem.convertUrl(testString));
     }
