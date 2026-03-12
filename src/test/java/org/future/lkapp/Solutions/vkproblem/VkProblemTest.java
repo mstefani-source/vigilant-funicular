@@ -2,7 +2,6 @@ package org.future.lkapp.Solutions.vkproblem;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.future.lkapp.Solutions.vproblem.VkProblem;
 import org.junit.jupiter.api.Test;
 
 public class VkProblemTest {

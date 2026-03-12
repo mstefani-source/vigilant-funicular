@@ -5,7 +5,6 @@ import org.future.lkapp.Solutions.sametree.TreeNode;
 public class Bbt {
 
     private int right_counter;
-    private int left_counter; 
 
     public boolean isBalanced(TreeNode root) {
         goDig(root);

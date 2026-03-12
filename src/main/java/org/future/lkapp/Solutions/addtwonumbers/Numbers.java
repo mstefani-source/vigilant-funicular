@@ -1,7 +1,5 @@
 package org.future.lkapp.Solutions.addtwonumbers;
 
-import org.future.lkapp.Solutions.remnnode.NodeService;
-
 public class Numbers {
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {

@@ -41,7 +41,6 @@ public class Median {
         int len1 = nums1.length;
         int len2 = nums2.length;
         int startIndex = 0;
-        int finishIndex = 0;
 
         // узнаём где начинается второй массив относительно первого
         if (nums2[0] < nums1[len1]) {                    // второй массив начинается где-то в середине первого
@@ -58,7 +57,6 @@ public class Median {
 
     private int findIndex(int value, int[] arr) {
         int index = 0;
-        int len = arr.length;
         while (value != arr[index]) {
             if (value > arr[index]) {
 
