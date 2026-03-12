@@ -12,8 +12,8 @@ public class VkProblemTest {
         VkProblem testProblem = new VkProblem();
 
         String testString = "Java test  ";
-
-        assertEquals(testString, testProblem.convertUrl(testString));
+        String expectedString = "Java%20test";
+        assertEquals(expectedString, testProblem.convertUrl(testString));
     }
 
 }

@@ -3,14 +3,8 @@ package org.future.lkapp;
 <<<<<<< HEAD
 =======
 import java.util.List;
-
 import org.future.lkapp.Solutions.sberquestion.Binery;
-import java.util.List;
-
 import org.future.lkapp.Solutions.sberquestion.SberQuestion;
-
-// import org.future.lkapp.Solutions.linkedinproblem.ABCcalc;
-// import org.future.lkapp.Solutions.luckyticket.LuckyTicket;
 import org.future.lkapp.Solutions.sberquestion.BineryT;
 >>>>>>> a4244395cbaa9142d1d369cfbbb770320ccb7c12
 
@@ -24,39 +18,20 @@ public class Lk {
     public static void main(String[] args) {
 
         List<Integer> arr = List.of(1,2,3,4,5,6,6,7,7,8,9,9,10);
+        List<Integer> al = List.of(1,1,2,2,3,4,4,5,7,5,7);
 
 <<<<<<< HEAD
 =======
         Binery binery = new Binery();
+        BineryT bineryT = new BineryT();
 
         int [] arr1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         int [] arr2 = {1, 7, 8, 9, 98};
         int [] arr3 = {1, 100};
         int [] arr4 = {1};
 
-        System.out.println("find 8 " + binery.search(arr1, 1));
-        System.out.println("find 8 " + binery.search(arr2, 7));
-        System.out.println("find 8 " + binery.search(arr3, 1));
-        System.out.println("find 8 " + binery.search(arr4, 5));
-
-        // LuckyTicket lt = new LuckyTicket();
-        // System.out.println(lt.check("123423"));
-        
-        List<Integer> al = List.of(1,1,2,2,3,4,4,5,7,5,7);
         SberQuestion sq = new SberQuestion();
-
         System.out.println(sq.findUniqueBySet(al));
-        
-
-        List<Integer> arr = List.of(1,2,3,4,5,6,6,7,7,8,9,9,10);
-
-        BineryT binery = new BineryT();
-
-        int [] arr1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        int [] arr2 = {1, 7, 8, 9, 98};
-        int [] arr3 = {1, 100};
-        int [] arr4 = {1};
-
         System.out.println("find 8 " + binery.search(arr1, 3) + " should be true");
         System.out.println("find 8 " + binery.search(arr2, 7) + " should be true");
         System.out.println("find 8 " + binery.search(arr3, 45) + " should be false");
