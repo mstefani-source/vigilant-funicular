@@ -7,5 +7,5 @@
     "java.project.sourcePaths": [
         "lkapp"
     ],
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "automatic"
 }
