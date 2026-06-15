@@ -3,15 +3,16 @@ package org.future.lkapp;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.future.lkapp.Solutions.atoi.MyInteger;
-import org.future.lkapp.Solutions.lengthoflongestsubstring.LongestSubString;
-import org.future.lkapp.Solutions.lpc.Lpc;
-import org.future.lkapp.Solutions.lps.LongestPalindromicSubstring;
-import org.future.lkapp.Solutions.palindrome.Palindrome;
-import org.future.lkapp.Solutions.revint.Solution7;
-import org.future.lkapp.Solutions.zigzag.ZigZag;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.future.lkapp.solutions.atoi.MyInteger;
+import org.future.lkapp.solutions.lengthoflongestsubstring.LongestSubString;
+import org.future.lkapp.solutions.lpc.Lpc;
+import org.future.lkapp.solutions.lps.LongestPalindromicSubstring;
+import org.future.lkapp.solutions.palindrome.Palindrome;
+import org.future.lkapp.solutions.revint.Solution7;
+import org.future.lkapp.solutions.zigzag.ZigZag;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.junit.jupiter.api.Order;

@@ -2,6 +2,7 @@ package org.future.lkapp.Solutions.expiringcache;
 
 import java.time.Duration;
 
+import org.future.lkapp.solutions.expiringcache.ExpiringCache;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

@@ -2,8 +2,8 @@ package org.future.lkapp;
 
 import java.util.List;
 
-import org.future.lkapp.Solutions.sberquestion.Binery;
-import org.future.lkapp.Solutions.sberquestion.SberQuestion;
+import org.future.lkapp.solutions.sberquestion.Binery;
+import org.future.lkapp.solutions.sberquestion.SberQuestion;
 
 /**
  *
