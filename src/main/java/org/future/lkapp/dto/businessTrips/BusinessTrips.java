@@ -13,5 +13,17 @@ public abstract class BusinessTrips {
     List<DestinationDto> destinations;
     String companyGroup;
     BusinessTripType businessTripType;
+    public Object getCity() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getCity'");
+    }
+    public Object getCountry() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getCountry'");
+    }
+    public List<DestinationDto> getDestinations() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getDestinations'");
+    }
     
 }

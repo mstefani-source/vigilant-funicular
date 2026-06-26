@@ -1,0 +1,22 @@
+{
+    "dateFrom": "2026-06-22",
+    "dateTo": "2026-07-22",
+    "destinations": [
+        {
+            "countryCode": "RU",
+            "destinationName": "Воркута",
+            "arrivalDate": "2026-06-22",
+            "type": "CITY",
+            "gar_uuid": "e4asd9-323sdsd-2344-1231-567jhgkjhgk"
+        },
+        {
+            "countryCode": "RU",
+            "destinationName": "Турция",
+            "arrivalDate": "2026-06-22",
+            "type": "COUNTRY",
+            "gar_uuid": "e4asd9-323sdsd-2344-1231-567jhgkjhgk"
+        }
+    ],
+    "businessTripCountryType": "ru",
+    "purposecode": "1"
+}
